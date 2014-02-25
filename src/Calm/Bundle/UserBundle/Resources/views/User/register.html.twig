@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="loginBackground">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
+        <meta name="robots" content="noindex,nofollow" />
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{{ asset('calm/web/bundles/calmsocial/css/default.css') }}" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ asset('calm/web/bundles/calmsocial/js/default.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('calm/web/bundles/calmsocial/js/timeago.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('calm/web/bundles/calmsocial/js/sliceTime.js') }}"></script>
+        {% block head %}{% endblock %}
+    </head>
+    <body >
+        
+        
+        <div id="content">
+		
+			<div id="loginTabs" class="center">
+				<div >
+					<a href="{{path('login')}}" class="tabLoginNotSelect">Acessar</a>
+					<a href="" class="tabLoginSelect">Inscrever-se</a>
+				</div>
+			</div>			
+            <div  class="block center" id="loginBox">
+				<form action="{{ path('_create') }}" method="POST" {{ form_enctype(form) }}>
+					<div id="formRegister" class="center"> 
+						<div>
+							<div class="formError">
+								{{ form_errors(form.firstName) }}
+							</div>
+							{{ form_label(form.firstName) }}
+							{{ form_widget(form.firstName) }}
+						</div>
+						<div>
+							<div class="formError">
+								{{ form_errors(form.lastName) }}
+							</div>
+							{{ form_label(form.lastName) }}
+							{{ form_widget(form.lastName) }}
+						</div>
+						<div>
+							<div class="formError">
+								{{ form_errors(form.email) }}
+							</div>
+							{{ form_label(form.email) }}
+							{{ form_widget(form.email) }}
+						</div>
+						<div>
+							<div class="formError">
+								{{ form_errors(form.password.first) }}
+							</div>
+							{{ form_label(form.password.first) }}
+							{{ form_widget(form.password.first) }}
+						</div>
+						<div>
+							<div class="formError">
+								{{ form_errors(form.password.second) }}
+							</div>
+							{{ form_label(form.password.second) }}
+							{{ form_widget(form.password.second) }}
+						</div>
+						<div>
+							<div class="formError">
+								{{ form_errors(form.birthday) }}
+							</div>
+							{{ form_label(form.birthday) }}
+							{{ form_widget(form.birthday) }}
+						</div>
+						<div>
+							<div class="formError">
+								{{ form_errors(form.gender) }}
+							</div>
+							{{ form_label(form.gender) }}
+							{{ form_widget(form.gender) }}
+						</div>
+						{{form_rest(form)}}
+
+
+						<input type="submit" value="Cadastrar" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

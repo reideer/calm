@@ -1,0 +1,295 @@
+
+root {
+    display: block;
+}
+html {
+    background: none repeat scroll 0 0 #BDDDEB;
+}
+body {
+    color: #808080;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    margin: 0;
+}
+.block {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #7DA7B4;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding: 15px;
+}
+#content {
+    margin: 0 auto;
+    width: 970px;
+}
+.loginBackground {
+ /*   background-color: #2FA4E5;*/
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.center {
+    margin: 0 auto;
+}
+#loginTabs div {
+    margin-bottom: 10px;
+    margin-right: 150px;
+}
+#loginTabs {
+    margin-top: 150px;
+    text-align: right;
+    width: 520px;
+	margin-bottom:-1px;
+	
+}
+#loginTabs a {
+    border: 1px solid #7DA7B4;
+	border-bottom: 0px;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    width: 50px;
+	font-size:20px;
+	
+	box-shadow: 0px -3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+#loginTabs a:hover {
+    background-color: #FFFFFF;
+    border-left: 1px solid #DFDFDF;
+    border-right: 1px solid #DFDFDF;
+    border-top: 1px solid #DFDFDF;
+    color: #333333;
+}
+.tabLoginNotSelect {
+    color: #FFFFFF;
+}
+.tabLoginSelect {
+    background-color: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    color: #333333;
+	border-bottom: none;
+}
+#loginBox {
+    width: 500px;
+}
+#formLogin label {
+    color: #333333;
+    font-size: 18px;
+}
+#formLogin #username {
+    border: 1px solid #A1A1A1;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 14px;
+    width: 350px;
+}
+#formLogin #password {
+    border: 1px solid #A1A1A1;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 14px;
+    width: 350px;
+}
+#formLogin {
+    width: 370px;
+}
+#formRegister{
+    width: 370px;
+}
+#formRegister label {
+    color: #333333;
+    font-size: 18px;
+}
+
+#formRegister input{
+    border: 1px solid #A1A1A1;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 14px;
+    width: 350px;
+}
+
+#formRegister select{
+    border: 1px solid #A1A1A1;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 14px;
+}
+#formRegister .formError ul li{
+	color:red;
+	font-size:15px;
+}
+#register_gender input{
+	width:20px;
+}
+
+
+.rightSidebar {
+    width: 200px;
+}
+#dashboard {
+    width: 265px;
+}
+#timeline {
+    width: 630px;
+}
+#streamQuestions {
+    border-top: 1px solid #DFDFDF;
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+}
+.streamQuestionsItem {
+    border-bottom: 1px solid #DFDFDF;
+    min-height: 50px;
+    overflow: hidden;
+}
+#dashboardDisciplines {
+    list-style-type: none;
+}
+#disciplineTitle {
+    color: #404040;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-left: 15px;
+}
+.dashboardDisciplinesItem a {
+    color: #333333;
+}
+.dashboardDisciplinesItemLink {
+    color: #0088CC;
+}
+#question {
+    margin: 0 auto;
+}
+#questionSubmit {
+    margin-right: 10px;
+    width: 90px;
+}
+#question_description {
+    height: 90px;
+    margin-left: 15px;
+    width: 95%;
+}
+.questionDescription {
+    min-height: 50px;
+    overflow: hidden;
+    padding: 10px 5px 10px 10px;
+}
+#questionControls {
+    margin: 6px auto 0;
+    text-align: right;
+}
+.questionDetailsActive {
+    /*background-color: #F1EDE1;*/
+	margin-left: 70px;
+}
+.listAnswers {
+    border-top: 1px solid #DFDFDF;
+    list-style-type: none;
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-top: 5px;
+}
+.answer {
+    border-bottom: 1px solid #DFDFDF;
+    overflow: hidden;
+    padding: 5px 5px 5px 20px;
+}
+.questionActive {
+    box-shadow: 0 0 5px 5px #888888;
+    margin: 15px;
+}
+.formAnswer {
+    padding: 10px;
+    text-align: right;
+}
+.formAnswerText {
+    overflow: hidden;
+}
+.answerDescription {
+    height: 90px;
+    margin-bottom: 6px;
+    width: 590px;
+}
+.submitAnswer {
+    margin-left: 490px;
+}
+.defaultButton {
+    background: -moz-linear-gradient(center top , #3D94F6 5%, #1E62D0 100%) repeat scroll 0 0 #3D94F6;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+	background-color:#3d94f6;
+    border: 1px solid #337FED;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px 0 0 #97C4FE;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0;
+    text-shadow: 1px 1px 0 #1570CD;
+    width: 100px;
+}
+.defaultButton:hover {
+    background: -moz-linear-gradient(center top , #1E62D0 5%, #3D94F6 100%) repeat scroll 0 0 #1E62D0;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+	background-color:#1e62d0;
+}
+.defaultButton:active {
+    position: relative;
+    top: 1px;
+}
+.answerButton {
+    background: -moz-linear-gradient(center top , #8BBA08 5%, #719817 100%) repeat scroll 0 0 #8BBA08;
+    border: 1px solid #D83526;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px 0 0 #F29C93;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    height: 35px;
+    line-height: 15px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0;
+    text-shadow: 1px 1px 0 #B23E35;
+    width: 100px;
+}
+.answerButton:hover {
+    background: -moz-linear-gradient(center top , #719817 5%, #8BBA08 100%) repeat scroll 0 0 #719817;
+}
+.answerButton:active {
+    position: relative;
+    top: 1px;
+}
+.postInfo {
+    float: left;
+    margin: 2px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+}

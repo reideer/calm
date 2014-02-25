@@ -1,0 +1,14 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: calmo
+    database_user: root
+    database_password: 
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: pt_BR
+    secret: abcdd56d8f051e312a0fdf2361583acca0ddb5f4
+    database_path: null

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loginBackground">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
+        <meta name="robots" content="noindex,nofollow" />
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{{ asset('calm/web/bundles/calmsocial/css/default.css') }}" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ asset('calm/web/bundles/calmsocial/js/default.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('calm/web/bundles/calmsocial/js/timeago.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('calm/web/bundles/calmsocial/js/sliceTime.js') }}"></script>
+        {% block head %}{% endblock %}
+    </head>
+    <body >
+        
+        
+        <div id="content">
+		
+			<div id="loginTabs" class="center">
+				<div >
+					<a href="" class="tabLoginSelect">Acessar</a>
+					<a href="{{path('_register_form')}}" class="tabLoginNotSelect">Inscrever-se</a>
+				</div>
+			</div>			
+            <div  class="block center" id="loginBox">
+
+				{% if error %}
+					<div class="error">{{ error.message|trans({},'messages') }}</div>
+				{% endif %}
+
+				<form action="{{ path('login_check') }}" method="post">
+					<div id="formLogin" class="center">
+						<label for="username">Apelido ou e-mail:</label>
+						<input type="text" id="username" name="_username" value="{{ last_username }}" />
+					
+						<label for="password">Senha:</label>
+						<input type="password" id="password" name="_password" />
+					
+						
+						<button class="defaultButton" type="submit">Acessar</button>
+
+						<input type="hidden" name="_target_path" value="/" />
+
+					</div>
+				</form>
+
+			
+            </div>
+        </div>
+    </body>
+</html>

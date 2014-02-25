@@ -1,0 +1,60 @@
+{% extends "CalmSocialBundle::layout.html.twig" %}
+{% block head %}
+    <script type="text/javascript" src="{{ asset('calm/web/bundles/calmsocial/js/stream.js') }}"></script>
+<link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+{% endblock %}
+
+
+{% block title 'Social Bundle' %}
+
+
+
+    {% block sidebar %}
+
+
+
+<h2>Disciplinas</h2>
+        <ol id="dashboardDisciplines">
+
+                {% for discipline in disciplines %}
+                    {%if discipline.id != followedDiscipline.id %}
+                        <li class="dashboardDisciplinesItem">
+                            <a class="dashboardDisciplinesItemLink" href="{{ path('_followDiscipline', { 'disciplineId': discipline.id }) }}">{{ discipline.name }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+<a href="{{ path('_listDisciplines') }}">Mais Disciplinas</a>
+        </ol>
+    {% endblock %}
+
+{% block body %}
+
+<div class="stream">
+
+        {% block content %}
+
+            <h2 id="disciplineTitle">{{ followedDiscipline.name }}</h2>
+			<div id="questionForm">
+				<form action="{{ path('_askQuestion', {'discipline_id': followedDiscipline.id}) }}" method="POST" {{ form_enctype(formQuestion) }}>
+					<div class="formError">
+						{{ form_errors(formQuestion) }}
+					</div>
+					<div id="question">
+						{{ form_widget(formQuestion.description) }}
+					</div>
+					<div id="questionControls">
+						<input id="questionSubmit" class="defaultButton" type="submit" value="Perguntar" />    
+					</div>
+					{{ form_rest(formQuestion) }}
+				</form>
+			</div>
+
+                
+
+            <ol id="streamQuestions" >
+
+            </ol>
+        {% endblock %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+calm_educational:
+    resource: "@CalmEducationalBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+calm_security:
+    resource: "@CalmSecurityBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+calm_user:
+    resource: "@CalmUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+calm_social:
+    resource: "@CalmSocialBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

@@ -1,0 +1,24 @@
+{% extends "CalmSocialBundle::layout.html.twig" %}
+{% block head %}
+<link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+{% endblock %}
+
+
+{% block title 'Social Bundle' %}
+
+
+{% block body %}
+
+<div class="">
+        {% block content %}
+    <ul>
+        {% for discipline in disciplines %}
+        <li>
+            <h2><a href="{{ path('_followDiscipline', { 'disciplineId': discipline.id }) }}"><b>Disc:</b> {{ discipline.name }}</a></h2>
+        </li>
+             {% endfor %}
+    </ul>
+        {% endblock %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
+        <meta name="robots" content="noindex,nofollow" />
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{{ asset('calm/web/bundles/calmsocial/css/default.css') }}" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="{{ asset('calm/web/bundles/calmsocial/js/timeago.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('calm/web/bundles/calmsocial/js/sliceTime.js') }}"></script>
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        
+        
+        <div id="content">
+            <div class="header clear-fix block">
+               {% if app.user %}
+                    {{ app.user ? app.user.username : 'Anônimo' }}</strong> - <a href="{{ path('logout') }}">Sair</a>                
+               {% endif %} 
+            </div>
+
+            <div id="dashboard" class="block left">
+                
+                {% block sidebar %}{% endblock %}
+            </div>
+            <div id="timeline" class="block right">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

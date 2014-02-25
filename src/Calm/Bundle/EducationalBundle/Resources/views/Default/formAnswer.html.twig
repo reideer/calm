@@ -1,0 +1,12 @@
+<div class="formAnswer">          
+	<form action="{{ path('_answerQuestion', {'questionId': question.id}) }}" method="POST" {{ form_enctype(formAnswer) }}>
+                <div>
+                    <div class="formError">
+                            {{ form_errors(formAnswer) }}
+                    </div>
+                        {{ form_widget(formAnswer) }}
+                </div>
+
+                <input type="submit" value="Responder" />
+	</form>
+</div>
